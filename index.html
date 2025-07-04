@@ -1,6 +1,7 @@
-<html lang="pt-BR"><head>
+<html lang="pt-BR">
+<head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Adesivos/Lona</title>
     <link rel="icon" type="image/png" href="logo.png">
     <style>
@@ -369,7 +370,7 @@
         .material-category {
             margin-bottom: 15px;
             padding: 15px;
-            background: #f8f9ff;
+            background: NIRG;
             border-radius: 10px;
             border-left: 4px solid #2575fc;
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
@@ -565,8 +566,262 @@
         .delete-btn:hover {
             transform: scale(1.05);
         }
+
+        /* Media Query para dispositivos móveis */
+        @media (max-width: 768px) {
+            html, body {
+                width: 100%;
+                overflow-x: hidden;
+                margin: 0;
+                padding: 8px;
+                box-sizing: border-box;
+            }
+
+            .main-container {
+                display: flex;
+                flex-direction: column;
+                align-items: stretch;
+                justify-content: flex-start;
+                width: 100%;
+                max-width: 100%;
+                gap: 10px;
+            }
+
+            .material-container,
+            .form-container,
+            .result-container {
+                width: 100%;
+                max-width: 100%;
+                min-width: 0;
+                padding: 12px;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            .material-container {
+                order: -1;
+            }
+
+            .material-buttons {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+                gap: 8px;
+            }
+
+            .material-buttons button {
+                font-size: 11px;
+                padding: 10px;
+                min-height: 44px;
+                line-height: 1.2;
+                width: 100%;
+            }
+
+            .form-container h1,
+            .result-container h1 {
+                font-size: 18px;
+                margin-bottom: 10px;
+            }
+
+            h2 {
+                font-size: 13px;
+                margin: 8px 0;
+            }
+
+            label {
+                font-size: 11px;
+            }
+
+            input[type="text"],
+            input[type="number"],
+            select {
+                font-size: 12px;
+                padding: 8px;
+                min-height: 40px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            button {
+                font-size: 12px;
+                padding: 10px;
+                min-height: 44px;
+                width: 100%;
+            }
+
+            .measurement-row {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .checkbox-container {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 6px;
+                margin: 6px 0 12px 0;
+            }
+
+            .checkbox-label {
+                font-size: 11px;
+            }
+
+            .checkmark {
+                width: 16px;
+                height: 16px;
+                margin-right: 5px;
+            }
+
+            .valor-total {
+                font-size: 15px;
+                padding: 6px;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .observacoes {
+                font-size: 10px;
+                padding: 6px;
+            }
+
+            .info-text {
+                font-size: 10px;
+                margin-top: -6px;
+            }
+
+            .logo {
+                max-width: 160px;
+            }
+
+            #adminOverlay {
+                backdrop-filter: blur(3px);
+            }
+
+            #adminPanel {
+                width: 95%;
+                max-width: 100%;
+                padding: 12px;
+                max-height: 90vh;
+                overflow-y: auto;
+                box-sizing: border-box;
+            }
+
+            #adminPanel h2 {
+                font-size: 18px;
+                margin-bottom: 15px;
+            }
+
+            #adminBtn {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+                bottom: 10px;
+                right: 10px;
+            }
+
+            .admin-actions {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .admin-actions button {
+                font-size: 12px;
+                padding: 8px;
+                min-height: 40px;
+                width: 100%;
+            }
+
+            .material-category {
+                padding: 10px;
+            }
+
+            .material-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .material-item label {
+                width: 100%;
+                font-size: 11px;
+            }
+
+            .material-item input[type="number"],
+            .material-item input[type="text"] {
+                width: 100%;
+                max-width: 150px;
+                font-size: 11px;
+                padding: 6px;
+            }
+
+            .material-item input[type="checkbox"] {
+                width: 16px;
+                height: 16px;
+            }
+
+            .setting-item {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .setting-item label {
+                width: 100%;
+                font-size: 11px;
+            }
+
+            .setting-item input {
+                width: 100%;
+                max-width: 150px;
+                font-size: 11px;
+                padding: 6px;
+            }
+
+            .new-material-form h3,
+            .admin-settings h3 {
+                font-size: 13px;
+            }
+
+            .checkbox-option-admin label {
+                font-size: 11px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .material-buttons {
+                grid-template-columns: 1fr;
+            }
+
+            .checkbox-container {
+                grid-template-columns: 1fr;
+            }
+
+            .form-container h1,
+            .result-container h1 {
+                font-size: 16px;
+            }
+
+            button {
+                font-size: 11px;
+                padding: 8px;
+            }
+
+            .valor-total {
+                font-size: 14px;
+            }
+
+            .logo {
+                max-width: 140px;
+            }
+
+            .material-item input[type="number"],
+            .material-item input[type="text"] {
+                max-width: 120px;
+            }
+
+            .setting-item input {
+                max-width: 120px;
+            }
+        }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="adminOverlay"></div>
@@ -759,8 +1014,8 @@
                 { name: 'Lona / Banner', price: 65, minValue: 28, maxWidth: 138, active: true, blockQuantity: true },
                 { name: 'Vinil m²', price: 50, minValue: 32, maxWidth: 139, active: true, blockQuantity: true },
                 { name: 'Citru m²', price: 90, minValue: 65, maxWidth: 141, active: true, blockQuantity: true },
-		{ name: 'Adesivo Jateado', price: 95, minValue: 65, maxWidth: 125, active: true, blockQuantity: true },
-		{ name: 'Vinil Automotivo', price: 120, minValue: 65, maxWidth: 141, active: true, blockQuantity: true },
+                { name: 'Adesivo Jateado', price: 95, minValue: 65, maxWidth: 125, active: true, blockQuantity: true },
+                { name: 'Vinil Automotivo', price: 120, minValue: 65, maxWidth: 141, active: true, blockQuantity: true },
                 { name: 'Tecido Oxford', price: 30, minValue: 60, maxWidth: 111, active: true, blockQuantity: true }
             ],
             finishing: {
@@ -1133,5 +1388,5 @@
             hideAdminPanel();
         }
     </script>
-
-</body></html>
+</body>
+</html>
